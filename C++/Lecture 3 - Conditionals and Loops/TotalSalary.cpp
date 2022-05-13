@@ -6,16 +6,16 @@ int main()
     int basic;
     char grade;
     cin >> basic >> grade;
-    float hra = 0.2 * basic;
-    float da = 0.5 * basic;
+    double hra = 0.2 * basic;
+    double da = 0.5 * basic;
     int allow;
-    if (grade == 'A')
+    if (grade == 65)
         allow = 1700;
-    else if (grade == 'B')
+    else if (grade == 66)
         allow = 1500;
-    else if (grade == 'C')
+    else
         allow = 1300;
-    float pf = 0.11 * basic;
-    float total = basic + hra + da + allow - pf;
-    cout << round(total);
+    double pf = 0.11 * basic;
+    int total = round(basic + hra + da + allow - pf);
+    cout << total;
 }
