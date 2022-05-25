@@ -11,6 +11,7 @@ int linearSearch(int *arr, int n, int x)
     }
     return -1;
 }
+
 int main()
 {
 	int t;
