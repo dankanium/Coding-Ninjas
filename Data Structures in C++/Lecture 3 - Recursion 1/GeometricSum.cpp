@@ -8,7 +8,7 @@ using recursion. */
 using namespace std;
 
 double geometricSum(int k) {
-	if (k = 0)
+    if (k == 0)
         return 1;
     double ans = geometricSum(k - 1);
     ans += 1/(pow(2,k));
