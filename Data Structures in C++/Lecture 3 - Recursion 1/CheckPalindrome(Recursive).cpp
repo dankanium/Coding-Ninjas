@@ -2,25 +2,45 @@
 using namespace std;
 
 #include <cstring>
-void helper(char input[], int start, int end) 
+// my approach
+// void helper(char input[], int start, int end) 
+// {
+//     input = input + 1;
+//     input[strlen(input) - 1] = '\0';
+// }
+// bool checkPalindrome(char input[]) {
+//     int len = strlen(input);
+// 	if (len == 1) 
+//         return true;
+//     if (len == 0)
+//         return true;
+//     if (input[0] == input[len - 1])
+//     {
+//         helper(input, 0, len - 1);
+//     }
+//     else 
+//         return false;
+//     bool ans = checkPalindrome(input + 1);
+//     return ans;
+// }
+
+// another approach
+bool helper(char input[],int start,int end)
 {
-    input = input + 1;
-    input[strlen(input) - 1] = '\0';
-}
-bool checkPalindrome(char input[]) {
-    int len = strlen(input);
-	if (len == 1) 
-        return true;
-    if (len == 0)
-        return false;
-    if (input[0] == input[len - 1])
+    if(start>=end)
     {
-        helper(input, 0, len - 1);
+        return true;
     }
-    else 
+    if(input[start]!=input[end])
+    {
         return false;
-    bool ans = checkPalindrome(input + 1);
-    return ans;
+    }
+    return helper(input,start+1,end-1);
+}
+
+bool checkPalindrome(char input[]) 
+{
+    return helper(input,0,strlen(input)-1);
 }
 
 int main() {
