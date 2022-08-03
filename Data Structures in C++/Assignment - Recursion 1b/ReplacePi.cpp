@@ -3,24 +3,17 @@
 using namespace std;
 
 #include <cstring>
-void replacePi(char input[]) {
-	// Write your code here
-	int len = strlen(input);
-    if (len <= 1)
+void replacePi(char input[]) 
+{
+    int length = strlen(input);
+    if (length <= 1)
         return;
     replacePi(input + 1);
     if (input[0] == 'p' and input[1] == 'i')
     {
-        int i = 0, count = 0;
-        while (input[i] != '\0')
-        {
-            count++;
-            i++;
-        }
-        for (int i = count+1; i >= 2; i--)
-        {
+        int count = strlen(input);
+        for (int i = count + 1; i >= 2; i--)
             input[i + 2] = input[i];
-        }
         input[0] = '3';
         input[1] = '.';
         input[2] = '1';
