@@ -1,8 +1,8 @@
 #include <iostream>
 using namespace std;
-
+// Bitwise XOR. Same number XOR gives 0. 0 XOR 1 element is the unique
 int findUnique(int *arr, int n) {
-    int ans = arr[0];           // Bitwise XOR. Same number XOR gives 0. 0 XOR 1 element is the unique
+    int ans = arr[0];          
     for (int i = 1; i < n; i++)
     {
         ans ^= arr[i];
