@@ -35,11 +35,15 @@ Node *kReverse(Node *head, int k)
 	{
 		temp = temp->next;
 		count--;
+		if (temp->next == NULL)
+			break;
 	}
 	Node *newTail = kReverse(temp, k);
 	temp->next = NULL;
 	tail = head;
 	Node *newHead = reverse(head);
+	tail->next = newTail;
+	return newHead;
 }
 
 Node *takeinput()

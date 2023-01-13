@@ -44,7 +44,7 @@ class Stack {
         size++;
     }
 
-    int pop() {
+    int pop() {}
         // Implement the pop() function
         if (size == 0)
             return -1;

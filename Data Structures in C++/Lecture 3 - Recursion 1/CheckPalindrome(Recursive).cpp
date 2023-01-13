@@ -25,7 +25,7 @@ using namespace std;
 // }
 
 // another approach
-bool helper(char input[],int start,int end)
+bool helper(char input[], int start, int end)
 {
     if(start>=end)
     {
@@ -40,7 +40,7 @@ bool helper(char input[],int start,int end)
 
 bool checkPalindrome(char input[]) 
 {
-    return helper(input,0,strlen(input)-1);
+    return helper(input, 0, strlen(input)-1);
 }
 
 int main() {
